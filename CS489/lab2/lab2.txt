@@ -1,0 +1,24 @@
+//***/
+Have appointments add, view, Manage
+The system will have authorization and authentication and access based on roles
+
+Office manager registers new dentists
+
+Dentists will have unique Id, First Name, Last Name, Contact Phone Number, Email, 
+and Specialization 
+
+A dentist cannot be given more than 5 appointments in any given week and can have no appointments.
+
+Patient’s First Name, Last Name, Contact Phone Number, Email, Mailing Address
+and Date of Birth.
+
+Patient can also request an appointment by an online form, the Office Manager can then book the appointment.
+
+send a confirmation email notifying the Patient and the appointment gets recorded accordingly. // notification
+
+Appointment has specific date & time, at ADS’s surgery locations.
+
+Each Surgery, including its name, location address, and telephone number.
+
+Patients  sign in access to their appointments, their dentist information.
+Patients can request to cancel or change their appointments.

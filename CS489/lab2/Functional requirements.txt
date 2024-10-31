@@ -1,0 +1,58 @@
+Functional Requirements
+
+General System Requirements:
+
+Authentication:
+
+Provide secure authentication mechanisms for Office Managers, Dentists, and Patients.
+Support password management features such as reset and change password.
+Authorization:
+
+Restrict access to specific functionalities based on user roles (Office Manager, Dentist, Patient).
+Notification System:
+
+Automatically send confirmation emails upon appointment booking, cancellation, or rescheduling.
+Office Manager Functionalities:
+
+Dentist Registration:
+
+Allow the Office Manager to register Dentists with their details (ID, Name, Contact, Email, Specialization).
+Generate a unique ID number for each newly registered Dentist.
+Patient Registration:
+
+Enable the Office Manager to enroll new Patients with their details (Name, Contact, Email, Mailing Address, Date of Birth).
+Appointment Management:
+
+Facilitate the Office Manager in booking appointments for Patients upon request.
+Prevent booking more than 5 appointments for any Dentist in a given week.
+Appointment Adjustment:
+
+Allow the Office Manager to cancel or reschedule appointments as per request.
+Dentist Functionalities:
+
+View Appointments:
+Enable Dentists to sign in and view a listing of all their scheduled appointments, including Patient details.
+Patient Functionalities:
+
+View Appointments:
+
+Permit Patients to sign in and view their appointments, including the assigned Dentist’s information.
+Modify Appointments:
+
+Allow Patients to request cancellations or changes to their appointments.
+Appointment Requests:
+
+Enable Patients to request appointments either by calling in or submitting an online form.
+Prevent appointment requests if the Patient has outstanding, unpaid bills.
+Surgery Information Management:
+
+Manage Surgery Locations:
+Provide functionalities to record and update details of each dental surgery location (name, address, telephone number).
+Constraints and Business Rules:
+
+Appointment Allocation Limit:
+
+Ensure no Dentist is allocated more than 5 appointments in any given week.
+Outstanding Bills Check:
+
+Implement checks to prevent new appointment requests from Patients with unpaid bills.
