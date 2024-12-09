@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: horelo-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: horelo-app
+  template:
+    metadata:
+      labels:
+        app: horelo-app
+    spec:
+      containers:
+        - name: horelo-app-container
+          image: your-docker-image:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: horelo-app-secrets
+                  key: spring.datasource.url
+            - name: SPRING_DATASOURCE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: horelo-app-secrets
+                  key: spring.datasource.username
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: horelo-app-secrets
+                  key: spring.datasource.password
+            - name: AWS_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: horelo-app-secrets
+                  key: aws.accessKey
+            - name: AWS_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: horelo-app-secrets
+                  key: aws.secretKey
+            - name: AWS_S3_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: horelo-app-secrets
+                  key: aws.s3.region
+            - name: AWS_S3_BUCKET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: horelo-app-secrets
+                  key: aws.s3.bucketName

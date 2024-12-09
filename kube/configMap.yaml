@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: horelo-app-config
+data:
+  application.properties: |
+    # APPLICATION PROPERTIES
+    logging.level.root=info
+    spring.main.banner-mode=console
+    server.port=8090
+
+    # DATABASE CONFIG PROPERTIES
+    spring.datasource.url=jdbc:postgresql://ep-snowy-sea-a4k4tm6z.us-east-1.aws.neon.tech/horelo
+    spring.datasource.username=horelo_owner
+    spring.datasource.password=3MejOw9XJWCr
+
+    # JPA/Hibernate Properties
+    spring.jpa.show-sql=true
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+    spring.jpa.properties.hibernate.format_sql=true
+    logging.level.org.hibernate.type=trace
+    logging.level.org.springframework.security=DEBUG
